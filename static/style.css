@@ -1,0 +1,132 @@
+:root{
+    --primary-100:#2C3E50;
+    --primary-200:#57687c;
+    --primary-300:#b4c7dd;
+    --accent-100:#F7CAC9;
+    --accent-200:#926b6a;
+    --text-100:#333333;
+    --text-200:#5c5c5c;
+    --bg-100:#F2F2F2;
+    --bg-200:#e8e8e8;
+    --bg-300:#bfbfbf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--bg-100);
+    color: var(--text-100);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal form {
+    margin: auto;
+    margin-top: 20vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+header h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+header h5 {
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-100);
+    color: var(--bg-100);
+}
+
+.wrapper {
+    flex: 1; 
+}
+
+footer {
+    background-color: var(--primary-200);
+    padding: 1rem;
+    text-align: center;
+    color: var(--bg-200);
+}
+
+.open {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.modal h2{
+    text-align: center;
+}
+
+.modal label {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.modal input {
+    border-radius: 5px;
+}
+
+.modal textarea {
+    border-radius: 5px;
+}
+
+.add-button {
+    background-color: var(--primary-200);
+    color: var(--bg-200);
+    cursor: pointer;
+}
+
+form {
+    background-color: var(--bg-300);
+    padding: 1.5rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.ad {
+    background-color: var(--bg-300);
+    color: var(--text-200);
+    font-size: 1.3rem ;
+    height: fit-content; 
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+    margin: 1rem;
+    text-align: center;
+    margin-right: 100rem;
+}
