@@ -6,8 +6,9 @@
             <div class="wrapper">
                 <% posts.forEach((post) => { %>
                     <div class="ad">
+                        <img src="/uploads/<%= post.image ? post.image[0] : '' %>" alt="">
                         <h3><%= post.title %></h3>
-                        <p><%= post.desc %></p>
+                        <p><%= post.description %></p>
                     </div>
                 <% }) %>
             </div>

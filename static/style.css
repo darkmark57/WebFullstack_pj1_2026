@@ -121,12 +121,23 @@ form {
 .ad {
     background-color: var(--bg-300);
     color: var(--text-200);
-    font-size: 1.3rem ;
-    height: fit-content; 
+    font-size: 1.2rem; 
     border: 2px solid black;
     border-radius: 0.3rem;
     padding: 0.4rem;
     margin: 1rem;
     text-align: center;
     margin-right: 100rem;
+}
+
+#image {
+    display: none;
+}
+
+.upload {
+    background-color: var(--accent-100);
+    padding: 0.3rem;
+    border: 1px solid var(--primary-100);
+    width: 100%;
+    border-radius: 0.3rem;
 }
