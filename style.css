@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  color: #333333;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal form {
+  margin: auto;
+  margin-top: 20vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+header h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h5 {
+  text-align: center;
+}
+
+header {
+  background-color: #2C3E50;
+  color: #F2F2F2;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+footer {
+  background-color: #57687c;
+  padding: 1rem;
+  text-align: center;
+  color: #e8e8e8;
+}
+
+.open {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.modal h2 {
+  text-align: center;
+}
+
+.modal label {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+.modal input {
+  border-radius: 5px;
+}
+
+.modal textarea {
+  border-radius: 5px;
+}
+
+.add-button {
+  background-color: #57687c;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+form {
+  background-color: #bfbfbf;
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.ad {
+  background-color: #bfbfbf;
+  color: #5c5c5c;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin: 1rem;
+  text-align: center;
+  margin-right: 100rem;
+}
+
+#image {
+  display: none;
+}
+
+.upload {
+  background-color: #F7CAC9;
+  padding: 0.3rem;
+  border: 1px solid #2C3E50;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

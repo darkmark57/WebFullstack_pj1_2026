@@ -1,0 +1,67 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    form {
+        background-color: $bg-300;
+        padding: 1.5rem;
+        border-radius: 15px;
+        position: relative;
+        margin: auto;
+        margin-top: 20vh;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        
+        input,
+        textarea .add-button {
+            background-color: $bg-100;
+            color: $bg-200;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+            font-size: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .add-button {
+            background-color: $primary-200;
+            color: $bg-200;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            transition: transform 0.5s;
+        }
+
+        .modal label {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+
+        .modal input {
+            border-radius: 5px;
+        }
+
+        .modal textarea {
+            border-radius: 5px;
+        }
+    }
+
+
+    .modal h2 {
+        text-align: center;
+    }
+}

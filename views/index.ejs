@@ -5,11 +5,11 @@
             <%- include("header.ejs") -%>
             <div class="wrapper">
                 <% posts.forEach((post) => { %>
-                    <div class="ad">
+                    <a href="/post/<%= post.id %>" class="ad">
                         <img src="/uploads/<%= post.image ? post.image[0] : '' %>" alt="">
                         <h3><%= post.title %></h3>
                         <p><%= post.description %></p>
-                    </div>
+                    </a>
                 <% }) %>
             </div>
             <%- include("modal.ejs") %>

@@ -1,0 +1,148 @@
+@import "./base/clearDefault.scss";
+@import "./base/colors.scss";
+@import "./base/typography.scss";
+@import "./components/modal.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: $bg-100;
+    color: $text-100;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+header h5 {
+    text-align: center;
+}
+
+header {
+    background-color: $primary-100;
+    color: $bg-100;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+footer {
+    background-color: $primary-200;
+    padding: 1rem;
+    text-align: center;
+    color: $bg-200;
+    margin-top: auto;
+}
+
+.open {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.add-button {
+    background-color: $primary-200;
+    color: $bg-200;
+    cursor: pointer;
+}
+
+form {
+    background-color: $bg-300;
+    padding: 1.5rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.ad {
+    display: block;
+    text-decoration: none;
+    color: $text-100;
+    background-color: $bg-300;
+    color: $text-200;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+    margin: 1rem;
+    text-align: center;
+    margin-right: 100rem;
+}
+
+#image {
+    display: none;
+}
+
+.upload {
+    background-color: $accent-100;
+    padding: 0.3rem;
+    border: 1px solid $primary-100;
+    width: 100%;
+    border-radius: 0.3rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    margin: 1rem;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bg-300;
+    color: $text-200;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid $primary-100;
+}
+
+#description {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#image {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 2px solid $primary-100;
+}

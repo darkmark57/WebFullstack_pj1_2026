@@ -8,6 +8,14 @@
                 <h1>
                     <%= post.title %>
                 </h1>
+                <p>
+                    <%= post.description %>
+                </p>
+                <div class="images">
+                    <% if(post.image)post.image.forEach(i=> { %>
+                        <img src="/uploads/<%= i %>">
+                    <% }) %>
+                </div>
             </main>
             <%- include("footer.ejs") %>
     </body>

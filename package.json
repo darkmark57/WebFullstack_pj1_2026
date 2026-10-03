@@ -4,14 +4,18 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node --watch app.js",
+    "sass": "sass --watch styles/style.scss:static/style.css",
+    "dev": "concurrently \"npm run sass\" nodemon app.js",
     "start": "node app.js"
   },
   "keywords": [],
   "type": "commonjs",
   "dependencies": {
+    "concurrently": "^10.0.5",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
-    "multer": "^2.4.0"
+    "multer": "^2.4.0",
+    "nodemon": "^3.1.14",
+    "sass": "^1.105.1"
   }
 }
