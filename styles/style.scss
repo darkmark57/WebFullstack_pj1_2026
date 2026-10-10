@@ -1,7 +1,13 @@
-@import "./base/clearDefault.scss";
-@import "./base/colors.scss";
-@import "./base/typography.scss";
-@import "./components/modal.scss";
+@use "./base/mixins" as mixins;
+@use "./base/functions" as f;
+
+
+
+@import "./base/clearDefault";
+@import "./base/colors";
+@import "./base/typography";
+@import "./components/modal";
+@import "./components/post";
 
 * {
     margin: 0;
@@ -17,8 +23,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    @include mixins.scrollbars()
 }
 
+@debug(f.say_hello("hello"));
+@warn(f.randomColor());
+@error(f.pow(2, 3));
 header h1 {
     text-align: center;
     padding: 1rem;
@@ -31,10 +41,12 @@ header h5 {
 header {
     background-color: $primary-100;
     color: $bg-100;
+    @include mixins.transparent-shadow();
 }
 
 .wrapper {
     flex: 1;
+    @include mixins.responsive-container()
 }
 
 footer {
@@ -43,6 +55,7 @@ footer {
     text-align: center;
     color: $bg-200;
     margin-top: auto;
+    @include mixins.transparent-shadow($y: -5px);
 }
 
 .open {
@@ -79,18 +92,21 @@ form {
 }
 
 .ad {
-    display: block;
+    display: inline-block;
     text-decoration: none;
-    color: $text-100;
-    background-color: $bg-300;
     color: $text-200;
+    background-color: $bg-300;
     font-size: 1.2rem;
     border: 2px solid black;
     border-radius: 0.3rem;
-    padding: 0.4rem;
-    margin: 1rem;
+    padding: 0.4rem 1.5rem;
+    margin: 1rem auto;
     text-align: center;
-    margin-right: 100rem;
+    box-sizing: border-box;
+    p {
+        @include mixins.ellipsisText();
+    }
+    @include mixins.removeLinkStyle();
 }
 
 #image {

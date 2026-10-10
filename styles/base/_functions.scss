@@ -1,0 +1,19 @@
+@function say_hello($message: "message"){
+    @return $message
+};
+
+@function randomColor(){
+    $r: random($limit: 255);
+    $g: random($limit: 255);
+    $b: random($limit: 255);
+    @return rbg($r, $g, $b);
+};
+
+@function pow($number: 2, $exponent: 2){
+    $result: 1;
+    @for $i from 1 through $exponent{
+        $result: $result * $number;
+    }
+    @return $result
+}
+
