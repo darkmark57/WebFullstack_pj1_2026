@@ -1,4 +1,4 @@
-@import "./colors";
+@use "./colors" as c;
 
 
 @mixin responsive-container($max-width: 1200px, $padding: 16px) {
@@ -45,8 +45,8 @@
     $width: 10px,
     $radius: 5px,
     $colors: (
-        $primary-100,
-        $primary-200
+        c.$primary-100,
+        c.$primary-200
     )
 ){
     &::-webkit-scrollbar {
@@ -59,7 +59,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $primary-100;
+        background-color: c.$primary-100;
         border-radius: $radius;
     }
 

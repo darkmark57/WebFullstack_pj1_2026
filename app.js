@@ -1,6 +1,9 @@
 const express = require("express")
 const multer = require("multer")
 const path = require("path")
+const db = require("./db")
+
+
 
 const app = express()
 
@@ -27,31 +30,47 @@ app.use("/uploads", express.static("uploads"))
 let posts = []
 
 app.get("/", (req, res) => {
-    res.render("index", { posts })
+    db.query("SELECT * FROM posts", (err, result) => {
+        result.forEach(post => {
+            post.image = post.image != "" ? JSON.parse(post.image) : null
+        })
+        res.render("index", { posts: result })
+    })
 })
 
 app.post("/add", upload.fields([{ name: "image" }]), (req, res) => {
     let data = req.body
-    if(req.files.image) data.image = req.files.image.map(file => file.filename)
-    data.id = posts.length
-    posts.push(data)
-    res.status(201)
-    res.send()
+    if (req.files.image) data.image = req.files.image.map(file => file.filename)
+    data.image = data.image ? JSON.stringify(data.image) : ""
+
+    db.query("INSERT INTO posts SET ?", data, (err) => {
+        if (err) {
+            console.log(err.message)
+            res.status(500)
+            res.send()
+            return
+        }
+        res.status(201)
+        res.send()
+    })
 })
 
-app.get("/posts", (req, res) => {
-    res.status(200)
-    res.setHeader("content-type", "application/json")
-    res.json(posts)
-})
 
 app.get("/post/:id", (req, res) => {
     const postId = Number(req.params.id)
-    const post = posts.find(p => p.id == postId)
-    if(!post){
-        return res.status(404).render("Not found")
-    }
-    res.render("post", {post: posts[postId]})
+
+    db.query("SELECT * FROM posts WHERE id = ?", postId, (err, result) => {
+        if (err || result.length === 0) {
+            res.status(404)
+            res.render("notfound")
+            return
+        }
+        let post = result[0]
+        post.image = post.image != "" ? JSON.parse(post.image) : null
+        res.render("post", { post })
+    })
+
+
 })
 
 app.use((req, res, next) => {

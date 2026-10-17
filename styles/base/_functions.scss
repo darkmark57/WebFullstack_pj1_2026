@@ -1,11 +1,13 @@
+@use "sass:math" as math;
+
 @function say_hello($message: "message"){
     @return $message
 };
 
 @function randomColor(){
-    $r: random($limit: 255);
-    $g: random($limit: 255);
-    $b: random($limit: 255);
+    $r: math.random($limit: 255);
+    $g: math.random($limit: 255);
+    $b: math.random($limit: 255);
     @return rbg($r, $g, $b);
 };
 

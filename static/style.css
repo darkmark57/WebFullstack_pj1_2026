@@ -1,17 +1,305 @@
-/* Error: 8
- *    ,
- * 31 | @error(f.pow(2, 3));
- *    | ^^^^^^^^^^^^^^^^^^^
- *    '
- *   styles\style.scss 31:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: 8\a    \2577 \a 31 \2502  @error(f.pow(2, 3));\d\a    \2502  ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   styles\\style.scss 31:1  root stylesheet";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+  font-family: myfont;
+  src: url(font.ttf);
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal form {
+  background-color: #bfbfbf;
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+  margin: auto;
+  margin-top: 20vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.modal form input,
+.modal form textarea .add-button {
+  background-color: #F2F2F2;
+  color: #333333;
+  border-radius: 5px;
+}
+.modal form .close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+.modal form .add-button {
+  background-color: #57687c;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+.modal form .add-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.modal form .add-button {
+  transition: transform 0.5s;
+}
+.modal form .modal label {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+.modal form .modal input {
+  border-radius: 5px;
+}
+.modal form .modal textarea {
+  border-radius: 5px;
+}
+.modal .modal h2 {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  color: #333333;
+  font-family: myfont, Playwrite Canada Guides;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2C3E50;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: linear-gradient(to right, #2C3E50, #57687c);
+}
+
+header h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h5 {
+  text-align: center;
+}
+
+header {
+  background-color: #2C3E50;
+  color: #F2F2F2;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding-inline: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    padding-inline: 4px;
+  }
+}
+
+footer {
+  background-color: #57687c;
+  padding: 1rem;
+  text-align: center;
+  color: #e8e8e8;
+  margin-top: auto;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.open {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.add-button {
+  background-color: #57687c;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+form {
+  background-color: #bfbfbf;
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.ad {
+  display: inline-block;
+  text-decoration: none;
+  color: #5c5c5c;
+  background-color: #bfbfbf;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+  padding: 0.4rem 1.5rem;
+  margin: 1rem auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ad p {
+  overflow: hidden;
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.ad {
+  text-decoration: none;
+  color: inherit;
+}
+
+#image {
+  display: none;
+}
+
+.upload {
+  background-color: #F7CAC9;
+  padding: 0.3rem;
+  border: 1px solid #2C3E50;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  margin: 1rem;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bfbfbf;
+  color: #5c5c5c;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid #2C3E50;
+}
+
+#description {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#image {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 2px solid #2C3E50;
+}
+
+/*# sourceMappingURL=style.css.map */
