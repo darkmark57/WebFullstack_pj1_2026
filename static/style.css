@@ -302,4 +302,23 @@ main {
   border: 2px solid #2C3E50;
 }
 
+ul {
+  background-color: #bfbfbf;
+  gap: 2rem;
+  border: 1px solid black;
+}
+
+form {
+  border: 1px solid black;
+}
+
+li {
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  margin: 1rem;
+  gap: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px;
+}
+
 /*# sourceMappingURL=style.css.map */
